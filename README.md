@@ -124,6 +124,10 @@ The figure below displays:
 1. The distribution of recipes across categories.
 2. The percentage of high-traffic recipes within each category.
 
+<div align='center'> 
+    <img src= 'Recipe-ML-Modeling/reports/figures/category_summary.png' alt='Correlation' width=500> 
+</div>    
+
 ![Category Plots](figures/category_summary.png)
 
 Key Observations:
