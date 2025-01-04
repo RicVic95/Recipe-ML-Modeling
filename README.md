@@ -171,7 +171,7 @@ The transformed distributions showed improved symmetry, indicating successful no
 The relationship between features and the target variable was examined. The bar plot below illustrates the correlations:
 
 <div align='center'> 
-    <img src= 'ML_Recipe_selection/reports/figures/correlation_barplot.png' alt='Correlation_barplot' width=700> 
+    <img src= 'ML_Recipe_selection/reports/figures/correlation_barplot.png' alt='Correlation_barplot' width=500> 
 </div>  
 
 
@@ -198,7 +198,7 @@ The objective of this phase was to enrich the dataset by generating additional f
 K-Means clustering was utilized to group recipes based on their nutritional profiles, uncovering distinct recipe segments and providing valuable insights into traffic patterns. To optimize the clustering process, the Box-Cox transformations created before were utilized in order to address skewness in the data and ensure compatibility with the algorithm’s reliance on Euclidean distances and parametric assumptions. The Elbow Method was employed to identify the optimal number of clusters, selecting five clusters, as illustrated in the plot below:
 
 <div align='center'> 
-    <img src= 'ML_Recipe_selection/reports/figures/elbow_method_optimal_k.png' alt='Elbow_method' width=700> 
+    <img src= 'ML_Recipe_selection/reports/figures/elbow_method_optimal_k.png' alt='Elbow_method' width=500> 
 </div>  
 
 **Cluster Insights**
@@ -238,7 +238,7 @@ A feature named `avg_category_calories` was created by calculating the average c
 The correlation analysis revealed the following relationships between the engineered features and high traffic:
 
 <div align='center'> 
-    <img src= 'ML_Recipe_selection/reports/figures/Corr_engineered_features.png)' alt='Corr_eng_feat' width=700> 
+    <img src= 'ML_Recipe_selection/reports/figures/corr_engineered_features.png' alt='Corr_eng_feat' width=700> 
 </div>  
 
 **Key Findings:**
@@ -322,7 +322,7 @@ The engineered data model showed slightly better precision for both classes and 
 Both models performed well, with the engineered data model showing marginal improvements, mainly due to the `high_traffic_ratio_by_cat` feature. However, the engineered data model relies heavily on this single feature, which raises concerns about overfitting, particularly given the small dataset size. On the other hand, the original data model, while slightly less precise, uses a broader set of features and seems less prone to overfitting, making it more likely to generalize well to new data. Considering these factors, the model trained on the original dataset was chosen as the best perfoming model, since it may be the safer choice for avoiding overfitting and ensuring robust performance across diverse scenarios. 
 
 <div align='center'> 
-    <img src= 'ML_Recipe_selection/reports/figures/logistic_regression_OD_evaluation.png)' alt='LR_Eval' width=700> 
+    <img src= 'ML_Recipe_selection/reports/figures/logistic_regression_OD_evaluation.png' alt='LR_Eval' width=700> 
 </div>  
 
 ## Random Forest Model Analysis  
@@ -380,7 +380,7 @@ The Random Forest model trained on the engineered dataset achieves strong perfor
 Given the importance of robustness and generalizability, we selected the Random Forest model trained on the original data as the best option. Although its F1-score for high-traffic recipes (0.78) is slightly lower, it avoids over-reliance on a single feature, reducing overfitting risks and improving its suitability for unseen data.
 
 <div align='center'> 
-    <img src= 'ML_Recipe_selection/reports/figures/RF_OD_evaluation.png)' alt='RF_Eval' width=700> 
+    <img src= 'ML_Recipe_selection/reports/figures/RF_OD_evaluation.png' alt='RF_Eval' width=700> 
 </div>  
 
 ## Stacking Classifier Model Analysis  
