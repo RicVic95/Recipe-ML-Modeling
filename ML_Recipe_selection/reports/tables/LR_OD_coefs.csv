@@ -1,0 +1,11 @@
+Feature,Coefficient
+category_Beverages,3.729609, 
+category_Breakfast,1.333115
+category_Chicken,0.900239
+category_Dessert,0.076863
+calories_boxcox,0.050432
+sugar_boxcox,0.038420
+carbohydrate_boxcox,0.022155
+category_Lunch/Snacks,0.000000
+protein_boxcox,-0.057196
+servings,-0.074760

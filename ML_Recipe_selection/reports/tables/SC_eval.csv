@@ -1,0 +1,9 @@
+Metric,Value
+Precision (High),0.82
+Precision (Other),0.72
+Recall (High),0.80
+Recall (Other),0.74
+F1-Score (High),0.81
+F1-Score (Other),0.73
+Accuracy,0.78
+ROC AUC Score,0.83
