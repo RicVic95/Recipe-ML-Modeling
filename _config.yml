@@ -1,4 +1,4 @@
-title: Predicting High-Traffic Recipes: A Data-Driven Approach to Optimizing Website Engagement
+title: Predicting High-Traffic Recipes— A Data-Driven Approach to Optimizing Website Engagement
 description: This project aimed to develop a machine learning solution to predict which recipes would drive high website traffic, helping the business optimize homepage content and boost user engagement. By analyzing recipe data and evaluating models such as Logistic Regression, Random Forest, and a Stacking Classifier, the project delivered a robust recommendation system with improved accuracy and balanced performance.
 show_downloads: true
 theme: jekyll-theme-cayman
