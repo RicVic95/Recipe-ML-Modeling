@@ -125,10 +125,8 @@ The figure below displays:
 2. The percentage of high-traffic recipes within each category.
 
 <div align='center'> 
-    <img src= 'ML_Recipe_selection/reports/figures/category_summary.png' alt='Cat_summary' width=500> 
+    <img src= 'ML_Recipe_selection/reports/figures/category_summary.png' alt='Cat_summary' width=700> 
 </div>    
-
-![Category Plots](figures/category_summary.png)
 
 Key Observations:
 - Categories like `Chicken`, `Breakfast`, and `Beverages` represent approximately 40% of the dataset but have lower proportions of high-traffic recipes (42%, 31%, and 5%, respectively).
@@ -140,7 +138,10 @@ These findings underscore the importance of recipe categories in predicting traf
 
 Four key nutritional features—`calories`, `carbohydrate`, `sugar`, and `protein`—were analyzed for their potential predictive value. Initial visualizations revealed significant skewness in these distributions, indicating the presence of outliers and suggesting the need for normalization.
 
-![Nutritional Features Distribution](figures/nutritional_features_distributions.png)
+
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/nutritional_features_distributions.png' alt='FeatureDistributionsNF' width=700> 
+</div>    
 
 ## **Addressing Skewness: Box-Cox Transformation**
 A **Box-Cox transformation** was applied to normalize the skewed nutritional features. Before applying the transformation:
@@ -161,13 +162,18 @@ Post-transformation, new columns (`calories_boxcox`, `carbohydrate_boxcox`, `sug
 ### **Evaluating the Transformation**
 The transformed distributions showed improved symmetry, indicating successful normalization:
 
-![Box-Cox Nutritional Features Distribution](figures/BC_nutritional_features_distributions.png)
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/BC_nutritional_features_distributions.png' alt='BC_distributions' width=700> 
+</div>  
 
 ## **Correlation Analysis**
 
 The relationship between features and the target variable was examined. The bar plot below illustrates the correlations:
 
-![Correlation Barplot](figures/correlation_barplot.png)
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/correlation_barplot.png' alt='Correlation_barplot' width=700> 
+</div>  
+
 
 Key Findings:
 - Correlations were generally weak, suggesting potential non-linear relationships between features and the target variable.
@@ -191,7 +197,9 @@ The objective of this phase was to enrich the dataset by generating additional f
 
 K-Means clustering was utilized to group recipes based on their nutritional profiles, uncovering distinct recipe segments and providing valuable insights into traffic patterns. To optimize the clustering process, the Box-Cox transformations created before were utilized in order to address skewness in the data and ensure compatibility with the algorithm’s reliance on Euclidean distances and parametric assumptions. The Elbow Method was employed to identify the optimal number of clusters, selecting five clusters, as illustrated in the plot below:
 
-![Elbow-Method](figures/elbow_method_optimal_k.png)
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/elbow_method_optimal_k.png' alt='Elbow_method' width=700> 
+</div>  
 
 **Cluster Insights**
 Each cluster was analyzed for its nutritional characteristics and assigned a meaningful label. A new feature, `nutritional_cluster`, was created and assigned to each recipe. The table below summarizes the clusters:
@@ -229,7 +237,9 @@ A feature named `avg_category_calories` was created by calculating the average c
 
 The correlation analysis revealed the following relationships between the engineered features and high traffic:
 
-![Corr-eng-feat](figures/Corr_engineered_features.png)
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/Corr_engineered_features.png)' alt='Corr_eng_feat' width=700> 
+</div>  
 
 **Key Findings:**
 - **Strongest Correlation**: `high_traffic_ratio_by_cat` exhibited the highest positive correlation with high traffic (0.58), indicating that recipes from popular categories are more likely to generate high traffic.
@@ -311,7 +321,9 @@ The engineered data model showed slightly better precision for both classes and 
 ### Conclusion  
 Both models performed well, with the engineered data model showing marginal improvements, mainly due to the `high_traffic_ratio_by_cat` feature. However, the engineered data model relies heavily on this single feature, which raises concerns about overfitting, particularly given the small dataset size. On the other hand, the original data model, while slightly less precise, uses a broader set of features and seems less prone to overfitting, making it more likely to generalize well to new data. Considering these factors, the model trained on the original dataset was chosen as the best perfoming model, since it may be the safer choice for avoiding overfitting and ensuring robust performance across diverse scenarios. 
 
-![LR_Eval](figures/logistic_regression_OD_evaluation.png)
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/logistic_regression_OD_evaluation.png)' alt='LR_Eval' width=700> 
+</div>  
 
 ## Random Forest Model Analysis  
 
@@ -367,7 +379,9 @@ The Random Forest model trained on the engineered dataset achieves strong perfor
 
 Given the importance of robustness and generalizability, we selected the Random Forest model trained on the original data as the best option. Although its F1-score for high-traffic recipes (0.78) is slightly lower, it avoids over-reliance on a single feature, reducing overfitting risks and improving its suitability for unseen data.
 
-![RF_Eval](figures/RF_OD_evaluation.png)
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/RF_OD_evaluation.png)' alt='RF_Eval' width=700> 
+</div>  
 
 ## Stacking Classifier Model Analysis  
 
@@ -426,7 +440,9 @@ The coefficients reveal that the **Logistic Regression** base model contributed 
 ### Conclusion  
 The Stacking Classifier demonstrates robust performance, aligning well with the project’s objective of accurately predicting high-traffic recipes while minimizing false positives. With a **ROC AUC score of 0.83** and balanced performance across both classes, the model effectively meets the criteria for identifying high-traffic recipes. However, further refinements, such as addressing residual class imbalance and validating on larger datasets, could enhance its predictive power and generalizability. 
 
-![SC_Eval](figures/stacking_classifier_evaluation.png)
+<div align='center'> 
+    <img src= 'ML_Recipe_selection/reports/figures/stacking_classifier_evaluation.png' alt='Stacking_class_eval' width=700> 
+</div>  
 
 ## **Conclusion for Model Development**
 
