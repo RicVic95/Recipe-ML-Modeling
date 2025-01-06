@@ -1,3 +1,7 @@
+# Machine Learning For Optimizing Website Engagement
+
+---
+
 # Executive Summary
 
 ## **Objective**
@@ -50,6 +54,8 @@ Deploying the Stacking Classifier has the potential to significantly improve hom
 - Data-driven insights that empower strategic decision-making across marketing and product initiatives.
 
 With these recommendations, the company can effectively align its homepage recipe selection process with its strategic goal of maximizing website traffic and driving subscriptions.
+
+---
 
 # **Introduction**
 
